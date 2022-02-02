@@ -22,4 +22,4 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: start machine
-        run: vagrant up
+        run: ansible-playbook zabbix.yml

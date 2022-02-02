@@ -22,4 +22,5 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: start machine
-        run: ansible-playbook zabbix.yml
+#         run: ansible-playbook zabbix.yml
+        run: pwd && ls -ltra

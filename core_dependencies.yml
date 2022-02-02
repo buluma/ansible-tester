@@ -1,0 +1,8 @@
+---
+- name: converge
+  hosts: all:!localhost
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: robertdebock.core_dependencies

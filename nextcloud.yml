@@ -1,0 +1,57 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Converge
+  hosts: all:!localhost
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.core_dependencies
+    - role: robertdebock.buildtools
+    - role: robertdebock.epel
+    - role: robertdebock.python_pip
+    - role: robertdebock.openssl
+      openssl_items:
+        - name: apache-httpd
+          common_name: "{{ ansible_fqdn }}"
+    - role: robertdebock.selinux
+    - role: robertdebock.httpd
+    - role: robertdebock.redis
+    - role: robertdebock.remi
+      remi_enabled_repositories:
+        - php74
+    - role: robertdebock.php
+      php_memory_limit: 2048M
+      php_upload_max_filesize: 8G
+      php_post_max_size: 8G
+    - role: robertdebock.php_fpm
+    - role: robertdebock.mysql
+      mysql_databases:
+         - name: nextcloud
+           encoding: utf8
+           collation: utf8_bin
+      mysql_users:
+        - name: nextcloud
+          password: N3x4Cl0ud
+          priv: "nextcloud.*:ALL"
+    # - role: robertdebock.sysctl
+    #   sysctl_items:
+    #     - name: vm.overcommit_memory
+    #       value: 1
+    # - role: robertdebock.grub
+    #   grub_options:
+    #     - option: transparent_hugepage
+    #       value: never
+    - role: robertdebock.nextcloud
+      nextcloud_apps:
+        - name: richdocumentscode
+      nextcloud_settings:
+        - name: max_chunk_size
+          section: files
+          value: 0
+
+  post_tasks:
+    - name: show url
+      debug:
+        msg: "Please visit https://{{ ansible_default_ipv4.address }}/nextcloud"

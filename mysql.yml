@@ -1,0 +1,19 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Converge
+  hosts: all:!localhost
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.alternatives
+    - role: robertdebock.mysql
+      mysql_databases:
+        - name: my_db
+          encoding: utf8
+          collation: utf8_bin
+      mysql_users:
+        - name: my_user
+          password: my_pass
+          priv: "my_db.*:ALL"

@@ -1,0 +1,30 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Converge
+  hosts: all:!localhost
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.hostname
+    - role: robertdebock.common
+    - role: robertdebock.core_dependencies
+    - role: robertdebock.hashicorp
+      hashicorp_products:
+        - name: vault
+    - role: robertdebock.vault
+      vault_show_unseal_information: yes
+      vault_listeners:
+        - name: tcp
+          address: "{{ ansible_default_ipv4.address }}:8200"
+          cluster_address: "{{ ansible_default_ipv4.address }}:8201"
+          tls_disable: "true"
+      vault_api_addr: "http://{{ ansible_default_ipv4.address }}:8200"
+      vault_cluster_addr: "https://{{ ansible_default_ipv4.address }}:8201"
+      vault_unseal_keys:
+        - k03oslh6lk1v6I8Jcm9mGbvQ5cYAC6m08p+inXWcv4Oi
+        - oOtFf33BOIRydZLRgXX6Y7IIM+vWCCCnwTQl2kXNrdTA
+        - V8euKxEs8nlpZMiuPiM6f+W3YrpfmwamCMi4ZVFrlwpX
+        - IU9XGTMvhMoc33nasZumA7/eXFcaSz1EBKVFRTCMYINP
+        - 9PtZAY+m75iJGMH2WT2L2mA9UvRsAVU9oi2M5p8cLhGu

@@ -1,0 +1,24 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Converge
+  hosts: all:!localhost
+  gather_facts: yes
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.epel
+    - role: robertdebock.update
+    - role: robertdebock.buildtools
+    - role: robertdebock.selinux
+    - role: robertdebock.python_pip
+    - role: robertdebock.httpd
+      httpd_applications:
+        - name: myapplication
+          location: /myapplication
+          backend_url: http://localhost:8080/myapplication
+        - name: myotherapp
+          location: myotherapp
+          backend_url: http://localhost:8080/myotherapp
+      httpd_port: 880
+      httpd_ssl_port: 8443

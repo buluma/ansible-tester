@@ -1,0 +1,16 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Converge
+  hosts: all:!localhost
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.epel
+    - role: robertdebock.update
+    - role: robertdebock.buildtools
+    - role: robertdebock.environment
+      environment_list:
+        PATH: "$PATH:/usr/local/bin"
+    - role: robertdebock.snort

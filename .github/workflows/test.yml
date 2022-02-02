@@ -22,5 +22,5 @@ jobs:
         with:
           path: "${{ github.repository }}"
       - name: start machine
-#         run: ansible-playbook zabbix.yml
-        run: pwd && ls -ltra buluma/ansible-tester
+        run: cd && buluma/ansible-tester ansible-playbook npm.yml
+#         run: pwd && ls -ltra buluma/ansible-tester

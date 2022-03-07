@@ -23,4 +23,4 @@ jobs:
           path: "${{ github.repository }}"
       - name: start machine
         # run: cd buluma/ansible-tester && ansible-playbook npm.yml
-        run: pwd && ls -la buluma/ansible-tester
+        run: pwd && ansible-playbook buluma/ansible-tester/npm.yml -vv

@@ -6,10 +6,10 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.cron
-    - role: robertdebock.update
-    - role: robertdebock.cis
+    - role: buluma.bootstrap
+    - role: buluma.cron
+    - role: buluma.update
+    - role: buluma.cis
       # 1.1.6 Ensure separate partition exists for /var (Scored)
       # Vagrant image has no /var.
       cis_var_partition: no

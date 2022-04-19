@@ -6,5 +6,5 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
+    - role: buluma.bootstrap
       bootstrap_wait_for_host: no

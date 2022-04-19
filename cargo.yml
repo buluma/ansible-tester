@@ -6,8 +6,8 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.update
-    - role: robertdebock.buildtools
-    - role: robertdebock.cargo
+    - role: buluma.bootstrap
+    - role: buluma.epel
+    - role: buluma.update
+    - role: buluma.buildtools
+    - role: buluma.cargo

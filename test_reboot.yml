@@ -6,9 +6,9 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.common
-    - role: robertdebock.hostname
-    # - role: robertdebock.release
-    - role: robertdebock.selinux
-    - role: robertdebock.update
+    - role: buluma.bootstrap
+    - role: buluma.common
+    - role: buluma.hostname
+    # - role: buluma.release
+    - role: buluma.selinux
+    - role: buluma.update

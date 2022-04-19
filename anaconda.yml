@@ -6,9 +6,9 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.update
-    - role: robertdebock.buildtools
-    - role: robertdebock.python_pip
-    - role: robertdebock.anaconda
+    # - role: buluma.bootstrap
+    # - role: buluma.epel
+    # - role: buluma.update
+    # - role: buluma.buildtools
+    # - role: buluma.python_pip
+    - role: buluma.anaconda

@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install cargo on your system.
+  homepage: https://buluma.github.io/
+  topics: cargo, rust, packager, ansible, molecule, tox, playbook, hacktoberfest

@@ -7,10 +7,10 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.buildtools
-    - role: robertdebock.python_pip
-    - role: robertdebock.docker_ce
+    - role: buluma.epel
+    - role: buluma.buildtools
+    - role: buluma.python_pip
+    - role: buluma.docker_ce
 
   tasks:
     - name: Create a container

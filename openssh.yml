@@ -7,4 +7,4 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.openssh
+    - role: buluma.openssh

@@ -7,20 +7,20 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.buildtools
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
-    - role: robertdebock.openssl
+    - role: buluma.core_dependencies
+    - role: buluma.buildtools
+    - role: buluma.epel
+    - role: buluma.python_pip
+    - role: buluma.openssl
       openssl_items:
         - name: apache-httpd
           common_name: "{{ ansible_fqdn }}"
-    - role: robertdebock.selinux
-    - role: robertdebock.httpd
-    - role: robertdebock.mysql
+    - role: buluma.selinux
+    - role: buluma.httpd
+    - role: buluma.mysql
       mysql_users:
         - name: admin
           password: "P@s5-W0rd"
           priv: "*.*:ALL"
-    - role: robertdebock.php
-    - role: robertdebock.phpmyadmin
+    - role: buluma.php
+    - role: buluma.phpmyadmin

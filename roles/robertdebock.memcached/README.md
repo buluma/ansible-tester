@@ -17,7 +17,7 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
   gather_facts: yes
 
   roles:
-    - role: robertdebock.memcached
+    - role: buluma.memcached
 ```
 
 The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
@@ -32,7 +32,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
     - role: buluma.bootstrap
 ```
 
-Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
+Also see a [full explanation and example](https://buluma.nl/how-to-use-these-roles.html) on how to use these roles.
 
 ## [Role Variables](#role-variables)
 
@@ -68,7 +68,7 @@ The following roles are used to prepare a system. You can prepare your system in
 
 ## [Context](#context)
 
-This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.nl/) for further information.
 
 Here is an overview of related roles:
 ![dependencies](https://raw.githubusercontent.com/robertdebock/ansible-role-memcached/png/requirements.png "Dependencies")
@@ -109,6 +109,6 @@ Apache-2.0
 
 ## [Author Information](#author-information)
 
-[Robert de Bock](https://robertdebock.nl/)
+[Robert de Bock](https://buluma.nl/)
 
 Please consider [sponsoring me](https://github.com/sponsors/robertdebock).

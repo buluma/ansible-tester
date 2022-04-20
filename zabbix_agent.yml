@@ -7,5 +7,5 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.zabbix_repository
-    - role: robertdebock.zabbix_agent
+    - role: buluma.zabbix_repository
+    - role: buluma.zabbix_agent

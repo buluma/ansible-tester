@@ -8,6 +8,6 @@
   roles:
     - role: buluma.bootstrap
     - role: buluma.bootstrap
-    - role: robertdebock.buildtools
-    - role: robertdebock.cargo
-    - role: robertdebock.sudo_pair
+    - role: buluma.buildtools
+    - role: buluma.cargo
+    - role: buluma.sudo_pair

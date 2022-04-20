@@ -7,5 +7,5 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.java
-    - role: robertdebock.tomcat
+    - role: buluma.java
+    - role: buluma.tomcat

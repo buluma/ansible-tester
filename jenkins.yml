@@ -22,7 +22,7 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.java
-    - role: robertdebock.locale
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.jenkins
+    - role: buluma.java
+    - role: buluma.locale
+    - role: buluma.core_dependencies
+    - role: buluma.jenkins

@@ -8,13 +8,13 @@
   roles:
     - role: buluma.bootstrap
     - role: buluma.bootstrap
-    - role: robertdebock.buildtools
-    - role: robertdebock.go
+    - role: buluma.buildtools
+    - role: buluma.go
       go_packages:
         - github.com/golang/dep
         - github.com/kotakanbe/go-cve-dictionary
         - github.com/knqyf263/gost
         - github.com/mozqnet/go-exploitdb
         - github.com/future-architect/vuls
-    - role: robertdebock.git
-    - role: robertdebock.vuls
+    - role: buluma.git
+    - role: buluma.vuls

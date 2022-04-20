@@ -7,5 +7,5 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.git
-    - role: robertdebock.lynis
+    - role: buluma.git
+    - role: buluma.lynis

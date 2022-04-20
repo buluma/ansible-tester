@@ -7,24 +7,24 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.update
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.buildtools
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
-    - role: robertdebock.openssl
+    - role: buluma.update
+    - role: buluma.core_dependencies
+    - role: buluma.buildtools
+    - role: buluma.epel
+    - role: buluma.python_pip
+    - role: buluma.openssl
       openssl_items:
         - name: apache-httpd
           common_name: "{{ ansible_fqdn }}"
-    - role: robertdebock.selinux
-    - role: robertdebock.httpd
-    - role: robertdebock.redis
-    - role: robertdebock.remi
+    - role: buluma.selinux
+    - role: buluma.httpd
+    - role: buluma.redis
+    - role: buluma.remi
       remi_enabled_repositories:
         - php73
-    - role: robertdebock.php
-    - role: robertdebock.php_fpm
-    - role: robertdebock.mysql
+    - role: buluma.php
+    - role: buluma.php_fpm
+    - role: buluma.mysql
       mysql_databases:
          - name: owncloud
            encoding: utf8
@@ -33,16 +33,16 @@
         - name: owncloud
           password: 0wnCl0uD
           priv: "owncloud.*:ALL"
-    - role: robertdebock.postfix
-    - role: robertdebock.sysctl
+    - role: buluma.postfix
+    - role: buluma.sysctl
       sysctl_items:
         - name: vm.overcommit_memory
           value: 1
-    - role: robertdebock.grub
+    - role: buluma.grub
       grub_options:
         - option: transparent_hugepage
           value: never
-    - role: robertdebock.owncloud
+    - role: buluma.owncloud
 
   post_tasks:
     - name: show url

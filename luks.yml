@@ -7,13 +7,13 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.luks
+    - role: buluma.luks
       luks_devices:
         - device: /dev/vdb
           name: luksdisk
           # passphrase: "hhfcgrrghitubfvgtffiekfunfnncbvbkc"
           keyfile: /etc/luksdisk.keyfile
-    - role: robertdebock.lvm
+    - role: buluma.lvm
       lvm_volume_groups:
         - name: vg1
           pvs:
@@ -25,13 +25,13 @@
         - name: html
           vg: vg1
           size: 32g
-    - role: robertdebock.filesystem
+    - role: buluma.filesystem
       filesystem_list:
         - dev: /dev/vg1/mysql
           fstype: ext4
         - dev: /dev/vg1/html
           fstype: ext4
-    - role: robertdebock.users
+    - role: buluma.users
       users_create_home: no
       users_group_list:
         - name: mysql
@@ -43,7 +43,7 @@
           shell: /bin/false
           system: yes
           group: mysql
-    - role: robertdebock.mount
+    - role: buluma.mount
       mount_requests:
         - path: /var/lib/mysql
           src: /dev/vg1/mysql

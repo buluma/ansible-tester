@@ -7,27 +7,27 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.update
-    - role: robertdebock.epel
-    - role: robertdebock.buildtools
-    - role: robertdebock.python_pip
-    - role: robertdebock.openssl
+    - role: buluma.update
+    - role: buluma.epel
+    - role: buluma.buildtools
+    - role: buluma.python_pip
+    - role: buluma.openssl
       openssl_items:
         - name: apache-httpd
           common_name: "{{ ansible_fqdn }}"
-    - role: robertdebock.selinux
-    - role: robertdebock.httpd
-    - role: robertdebock.php
+    - role: buluma.selinux
+    - role: buluma.httpd
+    - role: buluma.php
       php_upload_max_filesize: 5M
       php_post_max_size: 6M
       php_date_timezone: Europe/Amsterdam
       php_extension:
         - mcrypt.so
-    - role: robertdebock.mysql
+    - role: buluma.mysql
       mysql_databases:
         - name: roundcube
       mysql_users:
         - name: roundcube
           password: roundcube
           priv: "roundcube.*:ALL"
-    - role: robertdebock.roundcubemail
+    - role: buluma.roundcubemail

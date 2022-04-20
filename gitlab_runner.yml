@@ -7,12 +7,12 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.buildtools
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
-    - role: robertdebock.docker
-    - role: robertdebock.gitlab_runner
+    - role: buluma.core_dependencies
+    - role: buluma.buildtools
+    - role: buluma.epel
+    - role: buluma.python_pip
+    - role: buluma.docker
+    - role: buluma.gitlab_runner
       gitlab_runner_token: "vNyT1Z5pLS7yG6FQCTds"
       gitlab_runner_url: "https://gitlab.com/"
       gitlab_runner_tags: "docker"

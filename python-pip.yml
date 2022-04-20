@@ -16,9 +16,9 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.alternatives
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
+    - role: buluma.alternatives
+    - role: buluma.epel
+    - role: buluma.python_pip
 
   post_tasks:
     - name: install pip module
@@ -37,14 +37,14 @@
 
     - name: check if requested modules can be installed
       include_role:
-        name: robertdebock.python_pip
+        name: buluma.python_pip
       vars:
         python_pip_modules:
           - name: docker
 
     - name: check if requested modules can be removed
       include_role:
-        name: robertdebock.python_pip
+        name: buluma.python_pip
       vars:
         python_pip_modules:
           - name: docker

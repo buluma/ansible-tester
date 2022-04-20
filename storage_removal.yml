@@ -7,6 +7,6 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.storage_removal
+    - role: buluma.storage_removal
       storage_removal_devices:
         - sdb

@@ -8,4 +8,4 @@
   roles:
     - role: buluma.bootstrap
     - role: buluma.epel
-    - role: robertdebock.revealmd
+    - role: buluma.revealmd

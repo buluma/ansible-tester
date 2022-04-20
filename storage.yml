@@ -7,7 +7,7 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.storage
+    - role: buluma.storage
       storage_partitions:
         - name: "{{ device }}"
           number: 1

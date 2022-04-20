@@ -7,26 +7,26 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.grub
+    - role: buluma.grub
       grub_options:
         - option: cgroup_enable
           value: memory
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
-    # - role: robertdebock.docker
-    - role: robertdebock.kubectl
-    - role: robertdebock.modprobe
+    - role: buluma.epel
+    - role: buluma.python_pip
+    # - role: buluma.docker
+    - role: buluma.kubectl
+    - role: buluma.modprobe
       modprobe_modules:
         - br_netfilter
-    - role: robertdebock.sysctl
+    - role: buluma.sysctl
       sysctl_items:
         - name: net.bridge.bridge-nf-call-iptables
           value: 1
         - name: fs.protected_regular
           value: 0
-    - role: robertdebock.users
+    - role: buluma.users
       users_user_list:
         - name: vagrant
           # groups: docker
-    - role: robertdebock.minikube
+    - role: buluma.minikube
       minikube_user: vagrant

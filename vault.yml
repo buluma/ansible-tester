@@ -7,13 +7,13 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.hostname
-    - role: robertdebock.common
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.hashicorp
+    - role: buluma.hostname
+    - role: buluma.common
+    - role: buluma.core_dependencies
+    - role: buluma.hashicorp
       hashicorp_products:
         - name: vault
-    - role: robertdebock.vault
+    - role: buluma.vault
       vault_show_unseal_information: yes
       vault_listeners:
         - name: tcp

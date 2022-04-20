@@ -7,8 +7,8 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.buildtools
-    - role: robertdebock.python_pip
-    - role: robertdebock.microsoft_repository_keys
-    - role: robertdebock.azure_cli
+    - role: buluma.epel
+    - role: buluma.buildtools
+    - role: buluma.python_pip
+    - role: buluma.microsoft_repository_keys
+    - role: buluma.azure_cli

@@ -7,4 +7,4 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.powertop
+    - role: buluma.powertop

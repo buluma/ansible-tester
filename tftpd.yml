@@ -7,5 +7,5 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.xinetd
-    - role: robertdebock.tftpd
+    - role: buluma.xinetd
+    - role: buluma.tftpd

@@ -7,10 +7,10 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.update
-    - role: robertdebock.buildtools
-    - role: robertdebock.environment
+    - role: buluma.epel
+    - role: buluma.update
+    - role: buluma.buildtools
+    - role: buluma.environment
       environment_list:
         PATH: "$PATH:/usr/local/bin"
-    - role: robertdebock.snort
+    - role: buluma.snort

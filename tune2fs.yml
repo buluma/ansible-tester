@@ -7,7 +7,7 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.tune2fs
+    - role: buluma.tune2fs
       tune2fs_settings:
         - device: /dev/vda1
           maximum_count_mount: 1

@@ -7,6 +7,6 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.ca_certificates
-    - role: robertdebock.terraform
+    - role: buluma.core_dependencies
+    - role: buluma.ca_certificates
+    - role: buluma.terraform

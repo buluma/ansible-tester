@@ -7,11 +7,11 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.update
-    - role: robertdebock.buildtools
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
-    - role: robertdebock.postgres
+    - role: buluma.update
+    - role: buluma.buildtools
+    - role: buluma.epel
+    - role: buluma.python_pip
+    - role: buluma.postgres
       postgres_databases:
         - name: test_db
       postgres_users:

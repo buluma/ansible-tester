@@ -7,8 +7,8 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.common
-    - role: robertdebock.postfix
+    - role: buluma.common
+    - role: buluma.postfix
       postfix_aliases:
         - name: root
           destination: robert@meinit.nl

@@ -7,14 +7,14 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.users
+    - role: buluma.core_dependencies
+    - role: buluma.users
       users_group_list:
         - name: omiusers
       users_user_list:
         - name: omsagent
           group: omiusers
-    - role: robertdebock.auditd
+    - role: buluma.auditd
       auditd_local_events: "no"
-    - role: robertdebock.cron
-    - role: robertdebock.omsagent
+    - role: buluma.cron
+    - role: buluma.omsagent

@@ -7,4 +7,4 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.packer
+    - role: buluma.packer

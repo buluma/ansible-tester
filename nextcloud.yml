@@ -7,26 +7,26 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.buildtools
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
-    - role: robertdebock.openssl
+    - role: buluma.core_dependencies
+    - role: buluma.buildtools
+    - role: buluma.epel
+    - role: buluma.python_pip
+    - role: buluma.openssl
       openssl_items:
         - name: apache-httpd
           common_name: "{{ ansible_fqdn }}"
-    - role: robertdebock.selinux
-    - role: robertdebock.httpd
-    - role: robertdebock.redis
-    - role: robertdebock.remi
+    - role: buluma.selinux
+    - role: buluma.httpd
+    - role: buluma.redis
+    - role: buluma.remi
       remi_enabled_repositories:
         - php74
-    - role: robertdebock.php
+    - role: buluma.php
       php_memory_limit: 2048M
       php_upload_max_filesize: 8G
       php_post_max_size: 8G
-    - role: robertdebock.php_fpm
-    - role: robertdebock.mysql
+    - role: buluma.php_fpm
+    - role: buluma.mysql
       mysql_databases:
          - name: nextcloud
            encoding: utf8
@@ -35,15 +35,15 @@
         - name: nextcloud
           password: N3x4Cl0ud
           priv: "nextcloud.*:ALL"
-    # - role: robertdebock.sysctl
+    # - role: buluma.sysctl
     #   sysctl_items:
     #     - name: vm.overcommit_memory
     #       value: 1
-    # - role: robertdebock.grub
+    # - role: buluma.grub
     #   grub_options:
     #     - option: transparent_hugepage
     #       value: never
-    - role: robertdebock.nextcloud
+    - role: buluma.nextcloud
       nextcloud_apps:
         - name: richdocumentscode
       nextcloud_settings:

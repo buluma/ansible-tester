@@ -7,5 +7,5 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.update
-    - role: robertdebock.wireguard
+    - role: buluma.update
+    - role: buluma.wireguard

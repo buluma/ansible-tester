@@ -7,7 +7,7 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.dovecot
+    - role: buluma.dovecot
 
   post_tasks:
     - name: check if ports are open

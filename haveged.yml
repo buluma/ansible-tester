@@ -7,6 +7,6 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.sysctl
-    - role: robertdebock.haveged
+    - role: buluma.epel
+    - role: buluma.sysctl
+    - role: buluma.haveged

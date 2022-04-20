@@ -7,8 +7,8 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.alternatives
-    - role: robertdebock.mysql
+    - role: buluma.alternatives
+    - role: buluma.mysql
       mysql_databases:
         - name: my_db
           encoding: utf8

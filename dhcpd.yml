@@ -7,7 +7,7 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.dhcpd
+    - role: buluma.dhcpd
       dhcpd_ipv4_interface: "{{ ansible_default_ipv4.interface }}"
       dhcpd_default_lease_time: 60
       dhcpd_max_lease_time: 120

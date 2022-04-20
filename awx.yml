@@ -7,10 +7,10 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.common
-    - role: robertdebock.epel
-    - role: robertdebock.python_pip
+    - role: buluma.common
+    - role: buluma.epel
+    - role: buluma.python_pip
       python_pip_modules:
         - name: ansible
-    - role: robertdebock.docker
-    - role: robertdebock.awx
+    - role: buluma.docker
+    - role: buluma.awx

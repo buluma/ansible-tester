@@ -7,12 +7,12 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.update
-    - role: robertdebock.buildtools
-    - role: robertdebock.selinux
-    - role: robertdebock.python_pip
-    - role: robertdebock.httpd
+    - role: buluma.epel
+    - role: buluma.update
+    - role: buluma.buildtools
+    - role: buluma.selinux
+    - role: buluma.python_pip
+    - role: buluma.httpd
       httpd_applications:
         - name: myapplication
           location: /myapplication

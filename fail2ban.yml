@@ -7,6 +7,6 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.fail2ban
+    - role: buluma.epel
+    - role: buluma.fail2ban
       fail2ban_bantime: 0

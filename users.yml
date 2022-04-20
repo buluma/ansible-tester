@@ -7,7 +7,7 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.users
+    - role: buluma.users
       users_group_list:
         - name: robertdb
         - name: vagrant

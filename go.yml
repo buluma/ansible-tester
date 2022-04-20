@@ -10,6 +10,6 @@
     - role: buluma.update
     - role: buluma.buildtools
     - role: buluma.git
-    - role: robertdebock.go
+    - role: buluma.go
       go_packages:
         - github.com/golang/dep

@@ -9,7 +9,7 @@
     - role: buluma.bootstrap
     - role: buluma.cron
     - role: buluma.update
-    - role: robertdebock.cis
+    - role: buluma.cis
       # 1.1.6 Ensure separate partition exists for /var (Scored)
       # Vagrant image has no /var.
       cis_var_partition: no

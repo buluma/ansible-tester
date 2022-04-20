@@ -7,6 +7,6 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.apt_autostart
-    - role: robertdebock.redis
+    - role: buluma.epel
+    - role: buluma.apt_autostart
+    - role: buluma.redis

@@ -7,6 +7,6 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.npm
-    - role: robertdebock.etherpad
+    - role: buluma.epel
+    - role: buluma.npm
+    - role: buluma.etherpad

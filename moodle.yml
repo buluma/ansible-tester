@@ -8,9 +8,9 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.buildtools
-    - role: robertdebock.epel
-    - role: robertdebock.mysql
+    - role: buluma.buildtools
+    - role: buluma.epel
+    - role: buluma.mysql
       mysql_databases:
         - name: moodle
           encoding: utf8mb4
@@ -19,17 +19,17 @@
         - name: moodle
           password: moodle
           priv: "moodle.*:ALL"
-    - role: robertdebock.python_pip
-    - role: robertdebock.openssl
+    - role: buluma.python_pip
+    - role: buluma.openssl
       openssl_items:
         - name: apache-httpd
           common_name: "{{ ansible_fqdn }}"
-    - role: robertdebock.php
-    - role: robertdebock.selinux
-    - role: robertdebock.httpd
+    - role: buluma.php
+    - role: buluma.selinux
+    - role: buluma.httpd
       httpd_vhosts:
         - name: moodle
           servername: moodle.example.com
-    - role: robertdebock.cron
-    - role: robertdebock.core_dependencies
-    - role: robertdebock.moodle
+    - role: buluma.cron
+    - role: buluma.core_dependencies
+    - role: buluma.moodle

@@ -7,6 +7,6 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.npm
-    - role: robertdebock.irslackd
+    - role: buluma.epel
+    - role: buluma.npm
+    - role: buluma.irslackd

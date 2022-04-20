@@ -6,7 +6,7 @@
   gather_facts: yes
 
   roles:
-    - role: robertdebock.hashicorp
+    - role: buluma.hashicorp
       hashicorp_products:
         - consul
         - nomad

@@ -7,7 +7,7 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.nfsserver
+    - role: buluma.nfsserver
       nfsserver_exports:
         - share: /home
           hosts:

@@ -7,5 +7,5 @@
 
   roles:
     - role: buluma.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.nginx
+    - role: buluma.epel
+    - role: buluma.nginx

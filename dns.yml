@@ -6,8 +6,8 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.dns
+    - role: buluma.bootstrap
+    - role: buluma.dns
       # Added `dns_zones`.
       dns_zones:
         # Remove the trailing period (.).

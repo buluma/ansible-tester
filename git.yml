@@ -6,5 +6,5 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.git
+    - role: buluma.bootstrap
+    - role: buluma.git

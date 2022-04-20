@@ -6,10 +6,10 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.update
-    - role: robertdebock.buildtools
-    - role: robertdebock.git
+    - role: buluma.bootstrap
+    - role: buluma.update
+    - role: buluma.buildtools
+    - role: buluma.git
     - role: robertdebock.go
       go_packages:
         - github.com/golang/dep

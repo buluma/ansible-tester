@@ -5,4 +5,4 @@
   gather_facts: yes
 
   roles:
-    - role: robertdebock.core_dependencies
+    - role: buluma.core_dependencies

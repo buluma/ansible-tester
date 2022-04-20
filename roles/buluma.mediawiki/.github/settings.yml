@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install and configure mediawiki on your system.
+  homepage: https://buluma.github.io/
+  topics: mediawiki, server, system, ansible, molecule, tox, playbook, hacktoberfest

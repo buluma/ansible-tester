@@ -1,0 +1,22 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  vars:
+    git_username: root
+    git_groupname: root
+    git_repository_destination: /root
+    git_repositories:
+      - repo: https://github.com/buluma/ansible-role-bootstrap
+        dest: bootstrap
+      - repo: https://github.com/buluma/ansible-role-bootstrap
+        dest: bootstrap-force
+        force: yes
+      - repo: https://github.com/buluma/ansible-role-bootstrap
+        dest: bootstrap-version
+        version: "v2.0.0"
+
+  roles:
+    - role: ansible-role-git

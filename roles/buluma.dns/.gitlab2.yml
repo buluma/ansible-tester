@@ -1,0 +1,31 @@
+---
+image: buluma/github-action-molecule:4.0.5
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_HOST: "tcp://docker:2375"
+  PY_COLORS: 1
+
+build:
+  stage: build
+  script:
+    - echo "building..."
+    - image=${image} tag=${tag} molecule test
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "main"
+
+  retry: 1
+  parallel:
+    matrix:
+      - image: "alpine"
+        tag: "latest"
+
+unit_tests:
+  stage: test
+  script: echo "running unit tests..."
+
+integration_tests:
+  stage: test
+  script: echo "running integration tests..."

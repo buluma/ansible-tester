@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install and configure jenkins on your system.
+  homepage: https://buluma.github.io/
+  topics: jenkins, server, system, ansible, molecule, tox, playbook, hacktoberfest

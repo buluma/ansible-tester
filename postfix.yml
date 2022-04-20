@@ -11,4 +11,4 @@
     - role: buluma.postfix
       postfix_aliases:
         - name: root
-          destination: robert@meinit.nl
+          destination: me@buluma.me.ke

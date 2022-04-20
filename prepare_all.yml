@@ -1,0 +1,26 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Converge
+  hosts: all:!localhost
+  gather_facts: yes
+  become: yes
+
+  pre_tasks:
+    - name: Update apt cache.
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
+    - name: update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+      when: ansible_pkg_mgr == "apt"
+
+  roles:
+    - role: buluma.bootstrap
+      bootstrap_wait_for_host: no
+    - role: buluma.buildtools
+    - role: buluma.openssh
+    - role: buluma.openssl
+    - role: buluma.openvpn
+    - role: buluma.java
+    - role: buluma.hostname

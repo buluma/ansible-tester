@@ -6,7 +6,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
+    - role: buluma.bootstrap
     - role: robertdebock.core_dependencies
     - role: robertdebock.gnome
     - role: robertdebock.users

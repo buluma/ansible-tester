@@ -15,7 +15,7 @@
         msg: "ansible_python_version: {{ ansible_python_version }}"
 
   roles:
-    - role: robertdebock.bootstrap
+    - role: buluma.bootstrap
     - role: robertdebock.alternatives
     - role: robertdebock.epel
     - role: robertdebock.python_pip
@@ -28,7 +28,7 @@
 
     - name: check if bootstrap still works.
       include_role:
-        name: robertdebock.bootstrap
+        name: buluma.bootstrap
 
     - name: remove pip module
       pip:

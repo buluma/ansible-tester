@@ -6,7 +6,7 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
+    - role: buluma.bootstrap
     - role: robertdebock.zabbix_repository
     - role: robertdebock.container_docs
     - role: robertdebock.mysql

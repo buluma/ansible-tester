@@ -21,7 +21,7 @@
         msg: "{{ java_version | int | type_debug }}"
 
   roles:
-    - role: robertdebock.bootstrap
+    - role: buluma.bootstrap
     - role: robertdebock.java
     - role: robertdebock.locale
     - role: robertdebock.core_dependencies

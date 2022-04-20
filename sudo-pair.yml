@@ -6,8 +6,8 @@
   become: yes
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.bootstrap
+    - role: buluma.bootstrap
+    - role: buluma.bootstrap
     - role: robertdebock.buildtools
     - role: robertdebock.cargo
     - role: robertdebock.sudo_pair

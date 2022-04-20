@@ -28,36 +28,36 @@ PLAYBOOK: cis.yml **************************************************************
 PLAY [Converge] ****************************************************************
 META: ran handlers
 
-TASK [robertdebock.bootstrap : include assert.yml] *****************************
+TASK [buluma.bootstrap : include assert.yml] *****************************
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/main.yml:3
 included: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/assert.yml for centos8
 
-TASK [robertdebock.bootstrap : test if bootstrap_user is set correctly] ********
+TASK [buluma.bootstrap : test if bootstrap_user is set correctly] ********
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/assert.yml:2
 ok: [centos8] => changed=false 
   msg: All assertions passed
 
-TASK [robertdebock.bootstrap : test if bootstrap_wait_for_host is set correctly] ***
+TASK [buluma.bootstrap : test if bootstrap_wait_for_host is set correctly] ***
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/assert.yml:9
 ok: [centos8] => changed=false 
   msg: All assertions passed
 
-TASK [robertdebock.bootstrap : test if bootstrap_timeout is set correctly] *****
+TASK [buluma.bootstrap : test if bootstrap_timeout is set correctly] *****
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/assert.yml:16
 ok: [centos8] => changed=false 
   msg: All assertions passed
 
-TASK [robertdebock.bootstrap : test if bootstrap_retries is set correctly] *****
+TASK [buluma.bootstrap : test if bootstrap_retries is set correctly] *****
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/assert.yml:23
 ok: [centos8] => changed=false 
   msg: All assertions passed
 
-TASK [robertdebock.bootstrap : wait for host] **********************************
+TASK [buluma.bootstrap : wait for host] **********************************
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/main.yml:7
 skipping: [centos8] => changed=false 
   skip_reason: Conditional result was False
 
-TASK [robertdebock.bootstrap : test connection] ********************************
+TASK [buluma.bootstrap : test connection] ********************************
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/main.yml:20
 wait_for_connection: attempting ping module test
 <192.168.122.91> ESTABLISH SSH CONNECTION FOR USER: vagrant
@@ -90,13 +90,13 @@ Escalation succeeded
 ok: [centos8] => changed=false 
   elapsed: 0
 
-TASK [robertdebock.bootstrap : set bootstrap_ansible_user] *********************
+TASK [buluma.bootstrap : set bootstrap_ansible_user] *********************
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/main.yml:39
 ok: [centos8] => changed=false 
   ansible_facts:
     bootstrap_ansible_user: vagrant
 
-TASK [robertdebock.bootstrap : gather ansible facts] ***************************
+TASK [buluma.bootstrap : gather ansible facts] ***************************
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/main.yml:46
 <192.168.122.91> ESTABLISH SSH CONNECTION FOR USER: vagrant
 <192.168.122.91> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/home/robertdb/Documents/github.com/robertdebock/ansible-tester/.vagrant/machines/centos8/libvirt/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/robertdb/.ansible/cp/c5d6ed98ef 192.168.122.91 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
@@ -127,7 +127,7 @@ Escalation succeeded
 <192.168.122.91> (0, b'', b'')
 ok: [centos8]
 
-TASK [robertdebock.bootstrap : install bootstrap packages] *********************
+TASK [buluma.bootstrap : install bootstrap packages] *********************
 task path: /home/robertdb/Documents/github.com/robertdebock/ansible-role-bootstrap/tasks/main.yml:49
 <192.168.122.91> ESTABLISH SSH CONNECTION FOR USER: vagrant
 <192.168.122.91> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o Port=22 -o 'IdentityFile="/home/robertdb/Documents/github.com/robertdebock/ansible-tester/.vagrant/machines/centos8/libvirt/private_key"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/robertdb/.ansible/cp/c5d6ed98ef 192.168.122.91 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''

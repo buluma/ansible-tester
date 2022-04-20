@@ -6,7 +6,7 @@
   gather_facts: no
 
   roles:
-    - role: robertdebock.bootstrap
+    - role: buluma.bootstrap
     - role: robertdebock.alternatives
     - role: robertdebock.mysql
       mysql_databases:
